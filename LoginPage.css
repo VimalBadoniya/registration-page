@@ -1,0 +1,20 @@
+.LoginPage {
+  font-size: medium;
+  font-weight: bold;
+}
+
+input,
+label {
+  border-radius: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+button {
+  background-color: rgb(35, 35, 169);
+  font-size: 20px;
+  color: rgb(62, 253, 9);
+  margin: 3px;
+}
+button:disabled {
+  background-color: rgba(35, 35, 169, 0.5);
+}

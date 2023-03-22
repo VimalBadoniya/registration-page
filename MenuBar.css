@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Left {
+  display: flex;
+  margin-left: 20px;
+}
+.Left:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Right {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.Right:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
