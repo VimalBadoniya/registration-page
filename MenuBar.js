@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./MenuBar.css";
+import LogoutContext from "../store-context/logout-context";
 
 
-const MenuBar = (props) => {
+const MenuBar = () => {
+  const ctx  = useContext(LogoutContext)
 
   return (
     <div className="container">
@@ -12,7 +14,7 @@ const MenuBar = (props) => {
       </div>
 
       <div className="Right">
-        <button onClick={props.onLogout}>Logout</button>
+        <button onClick={ctx.onLogOut}>Logout</button>
       </div>
     </div>
   );

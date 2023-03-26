@@ -3,6 +3,7 @@ import LoginPage from "./Components/LoginPage";
 import Header from "./UI/Header";
 import Account from "./Components/Account";
 import { useEffect, useState } from "react";
+import LogoutContext from "./store-context/logout-context";
 
 function App() {
   const [isLoggedIn , setLoggedIn] = useState(false);
@@ -24,7 +25,11 @@ function App() {
     <div className="App">
       <Header></Header>
       {!isLoggedIn && <LoginPage onLoginClick = {LoginButtonHandler}></LoginPage>}
-      {isLoggedIn && <Account onLogoutClick={LogoutButtonHandler}></Account>}
+
+      <LogoutContext.Provider value={{onLogOut : LogoutButtonHandler }}>
+      {isLoggedIn && <Account></Account>}
+      </LogoutContext.Provider>
+      
     </div>
   );
 }
